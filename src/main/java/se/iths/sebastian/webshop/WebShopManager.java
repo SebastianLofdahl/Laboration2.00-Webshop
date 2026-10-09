@@ -19,6 +19,11 @@ public class WebShopManager {
     }
 
     void startWebshop() {
-        
+        //pseudokod
+        //rabattkod = outInputHandler.prompt("Ange rabattkod:")
+        //val = outInputHandler.menu()
+        //om val är "1":
+        //articleNumber = outInputHandler.prompt("Ange artikelnummer:")
+        //title = outInputHandler.prompt("Ange titel:")
     }
 }
