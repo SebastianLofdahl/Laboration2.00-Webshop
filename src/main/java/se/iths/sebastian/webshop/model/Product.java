@@ -19,7 +19,13 @@ public class Product {
     }
 
     public static Product fromFileLine(String line) {
-        
+        String[] parts = line.split(";");
+        String articleNumber = parts[0];
+        String title = parts[1];
+        double price = Double.parseDouble(parts[2]);
+        String description = parts[3];
+        return new Product(articleNumber, title, price, description);
+
     }
 
     public String getArticleNumber() {

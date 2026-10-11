@@ -4,7 +4,7 @@ import se.iths.sebastian.webshop.model.Product;
 
 import java.util.List;
 
-public interface ProducStorage {
+public interface ProductStorage {
 
     void saveProduct(Product product);
 
