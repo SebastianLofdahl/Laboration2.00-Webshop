@@ -12,8 +12,9 @@ public class HalfPriceDiscount extends Discount {
         if (originalPrice <= 0) {
             throw new IllegalArgumentException("Price must be bigger than 0kr");
         }
+        //Räkna fram 50% avdrag
         double discountedPrice = originalPrice * 0.5;
-
-        return Math.round(originalPrice * 100.0) / 100.0;
+        //Avrunda till två decimaler
+        return Math.round(discountedPrice * 100.0) / 100.0;
     }
 }
