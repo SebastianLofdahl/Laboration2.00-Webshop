@@ -13,7 +13,7 @@ class TenPercentDiscountTest {
     @BeforeEach
     void setUpTest() {
         //Note to self, initsiera innan varje test så jag inte behöver skriva så mycke.
-        tenPercentPriceDiscount = new TenPercentDiscount("90% rabatt borde räknas ut");
+        tenPercentPriceDiscount = new TenPercentDiscount("10% rabatt borde räknas ut");
 
     }
 

@@ -4,7 +4,8 @@ public class Main {
     static void main() {
 
         ProductFileStorage newfile = new ProductFileStorage();
-        WebShopManager newInstance = new WebShopManager(newfile);
+        ConsoleOutInputHandler newInput = new ConsoleOutInputHandler();
+        WebShopManager newInstance = new WebShopManager(newfile, newInput);
         newInstance.startWebshop();
     }
 }
