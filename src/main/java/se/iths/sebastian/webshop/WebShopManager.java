@@ -87,17 +87,20 @@ public class WebShopManager {
                     if (products.isEmpty()) {
                         outInputHandler.info("No products found.");
                     } else {
-                        outInputHandler.info("--Product list--");
+                        //Skapa strängen före loopen (börjar med rubriken)
+                        String text = "--Product List--";
 
                         for (Product product : products) {
                             double discountedPrice = discount.calculatePrice(product.getPrice());
 
-                            outInputHandler.info("\nArticle number: " + product.getArticleNumber()
+                            text += "\nArticle number: " + product.getArticleNumber()
                                     + "\nTitle: " + product.getTitle()
                                     + "\nOrdinary price: " + product.getPrice()
                                     + "\nDiscounted price: " + discountedPrice
-                                    + "\nDescription: " + product.getDescription());
+                                    + "\nDescription: " + product.getDescription()
+                                    + "\n-------";
                         }
+                        outInputHandler.info(text);
                     }
 
                 }
@@ -110,12 +113,13 @@ public class WebShopManager {
                     if (product != null) {
                         double discountedPrice = discount.calculatePrice(product.getPrice());
 
-                        outInputHandler.info("\n--Product information--");
-                        outInputHandler.info("\nArticle number: " + product.getArticleNumber()
+                        String text = "--Product information--\n";
+                        text += "\nArticle number: " + product.getArticleNumber()
                                 + "\nTitle: " + product.getTitle()
                                 + "\nOriginal price: " + product.getPrice()
                                 + "\nDiscounted price: " + discountedPrice
-                                + "\nDescription: " + product.getDescription());
+                                + "\nDescription: " + product.getDescription();
+                        outInputHandler.info(text);
                     } else {
                         outInputHandler.info("ERROR!\nNo product found with that article number.");
                     }

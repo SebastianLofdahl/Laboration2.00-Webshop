@@ -94,6 +94,6 @@ class WebShopManagerTest {
         // Assert: Verifiera att en produkt skapades och sparades i lagringen automatiskt
         assertEquals(1, productListStorage.getProducts().size());
         assertEquals("test title", productListStorage.getProduct("x4242")
-                .getTitle());
+                .getArticleNumber());
     }
 }
