@@ -27,8 +27,8 @@ class WebShopManagerTest {
     void saveProductToStorageTest() {
 
         // Arrange/Förbered: Skapa en testprodukt
-        Product testProduct = new Product("s4242", "Bunch of Tönts", 42.42,
-                "A bunch of bomba tönts");
+        Product testProduct = new Product("s4242", "Bunch of Bombas", 42.42,
+                "A bunch of bomba bombastics");
 
         // Act/Utför: Spara produkten via din webShopManager
         webShopManager.saveProductToStorage(testProduct);
@@ -36,16 +36,16 @@ class WebShopManagerTest {
         // Assert/Verifiera: Kolla att produkten faktiskt hamnade i lagringen
         Product foundProduct = productListStorage.getProduct("s4242");
         assertNotNull(foundProduct, "Product should be found here");
-        assertEquals("Bunch of Tönts", foundProduct.getTitle());
+        assertEquals("Bunch of Bombas", foundProduct.getTitle());
     }
 
     @Test
     void getProductsFromStorageTest() {
 
         // Arrange: Lägg till två produkter i lagringen
-        Product testProduct1 = new Product("t4242", "Tönts Two: Electric Boogaloo",
-                43.43, "Tönts on the loose");
-        Product testProduct2 = new Product("y4242", "Tönts Three: Rise of Pink Bomba",
+        Product testProduct1 = new Product("t4242", "Bomba Two: Electric Boogaloo",
+                43.43, "Bomba on the loose");
+        Product testProduct2 = new Product("y4242", "Bomba Three: Rise of Pink Bomba",
                 44.44, "Big Bomba Marc GM reforming Fractal");
         webShopManager.saveProductToStorage(testProduct1);
         webShopManager.saveProductToStorage(testProduct2);
@@ -63,7 +63,7 @@ class WebShopManagerTest {
     void getProductFromStorageTest() {
 
         // Arrange: Lägg till en produkt direkt i lagringen
-        Product testProduct3 = new Product("io4242", "Tönts: Rise of the Bomba",
+        Product testProduct3 = new Product("io4242", "Bomba: Rise of the Bomba",
                 48.48, "This is just a test");
         webShopManager.saveProductToStorage(testProduct3);
 
@@ -72,7 +72,7 @@ class WebShopManagerTest {
 
         // Assert: Verifiera att vi fick tillbaka rätt produkt och att den inte är null
         assertNotNull(found);
-        assertEquals("Tönts: Rise of the Bomba", found.getTitle());
+        assertEquals("Bomba: Rise of the Bomba", found.getTitle());
     }
 
     @Test
@@ -93,7 +93,7 @@ class WebShopManagerTest {
 
         // Assert: Verifiera att en produkt skapades och sparades i lagringen automatiskt
         assertEquals(1, productListStorage.getProducts().size());
-        assertEquals("test title", productListStorage.getProduct("x4242")
+        assertEquals("x4242", productListStorage.getProduct("x4242")
                 .getArticleNumber());
     }
 }
