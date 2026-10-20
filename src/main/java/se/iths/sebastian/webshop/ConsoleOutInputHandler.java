@@ -9,7 +9,7 @@ public class ConsoleOutInputHandler implements OutInputHandler {
             String input = IO.readln(message);
 
             try {
-                if (input.isEmpty()) {
+                if (input == null || input.isEmpty()) {
                     throw new IllegalArgumentException("Input kan ej vara tomt.");
                 }
                 return input;

@@ -45,7 +45,8 @@ public class WebShopManager {
 
     void startWebshop() {
 
-        String discountCode = outInputHandler.prompt("--Please type in your discount code--\n");
+        String discountCode = outInputHandler.prompt("--Please type in your discount code--\n" +
+                "If you do not have a discount code enter \"none\" or any other text to proceed");
         Discount discount = null;
 
         if (discountCode.equalsIgnoreCase("Halfprice")) {
