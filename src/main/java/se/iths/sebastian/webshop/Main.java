@@ -10,7 +10,6 @@ public class Main {
 //        } catch (RuntimeException | ClassNotFoundException | InstantiationException | IllegalAccessException |
 //                 UnsupportedLookAndFeelException e) {
 //        }
-        //Extern dependency för denna design
         FlatDarkLaf.setup();
         ProductFileStorage newfile = new ProductFileStorage();
         //ConsoleOutInputHandler newInput = new ConsoleOutInputHandler();

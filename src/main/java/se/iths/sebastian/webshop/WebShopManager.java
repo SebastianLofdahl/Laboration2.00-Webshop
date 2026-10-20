@@ -138,6 +138,9 @@ public class WebShopManager {
                 case "4" -> {
                     inMenu = false;
                 }
+                default -> {
+                    outInputHandler.info("ERROR!\nInvalid choice, must be between 1-4.");
+                }
             }
         }
         outInputHandler.info("Thank you for visiting the webshop, hope to see you again soon!");
