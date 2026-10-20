@@ -40,8 +40,8 @@ public class WebShopManager {
                 // Validering: Kontrollera om talet är noll eller negativt
                 //Fick en bugg när jag spara noll eller negativt
                 if (resultat <= 0) {
-                    outInputHandler.info("Talet måste vara större än noll. Försök igen.");
-                    continue; // Hoppar tillbaka till början av while-loopen
+                    outInputHandler.info("Price must be more than zero");
+                    continue;
                 }
 
                 return resultat;
@@ -55,7 +55,7 @@ public class WebShopManager {
     void startWebshop() {
 
         String discountCode = outInputHandler.prompt("--Please type in your discount code--\n" +
-                "If you do not have a discount code enter \"none\" or any other text to proceed");
+                "If you do not have a discount code enter \"none\" or any other text to proceed\n");
         Discount discount = null;
 
         if (discountCode.equalsIgnoreCase("Halfprice")) {
