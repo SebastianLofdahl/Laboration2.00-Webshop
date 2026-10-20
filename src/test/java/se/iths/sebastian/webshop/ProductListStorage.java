@@ -7,7 +7,6 @@ import java.util.List;
 
 /*Hanterar lagringen av webbshoppens produkter i minnet med hjälp av en lista.
  Implementerar gränssnittet ProductStorage.*/
-
 public class ProductListStorage implements ProductStorage {
 
     // En intern lista som sparar alla produkter i minnet under testest körning

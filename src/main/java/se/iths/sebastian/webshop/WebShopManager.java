@@ -35,7 +35,16 @@ public class WebShopManager {
 
             try {
                 svar = svar.trim().replace(',', '.');
-                return Double.parseDouble(svar);
+                double resultat = Double.parseDouble(svar);
+
+                // Validering: Kontrollera om talet är noll eller negativt
+                //Fick en bugg när jag spara noll eller negativt
+                if (resultat <= 0) {
+                    outInputHandler.info("Talet måste vara större än noll. Försök igen.");
+                    continue; // Hoppar tillbaka till början av while-loopen
+                }
+
+                return resultat;
             } catch (NumberFormatException e) {
                 outInputHandler.info("It has to be a number in the correct format, " +
                         "\nPlease try again");

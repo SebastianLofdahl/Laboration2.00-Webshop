@@ -72,7 +72,7 @@ class WebShopManagerTest {
 
         // Assert: Verifiera att vi fick tillbaka rätt produkt och att den inte är null
         assertNotNull(found);
-        assertEquals("Bomba: Rise of the Bomba", found.getTitle());
+        assertEquals("io4242", found.getArticleNumber());
     }
 
     @Test

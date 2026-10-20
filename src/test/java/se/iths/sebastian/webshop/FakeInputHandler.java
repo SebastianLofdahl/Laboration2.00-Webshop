@@ -5,7 +5,6 @@ import java.util.List;
 public class FakeInputHandler implements OutInputHandler {
 
     // Förberedda svar för när programmet ställer frågor om en produkt (t.ex. artikelnummer, titel)
-    // Det första svaret "halfprice" simulerar ett medvetet fel (t.ex. felaktigt val eller kommando) innan själva produkten skapas
     private List<String> answers = List.of("halfprice", "x4242", "test title", "42.42", "test description",
             "Yes");
     // En räknare (index) som håller koll på vilket svar i listan 'answers' som står på tur att returneras

@@ -13,7 +13,7 @@ class TenPercentDiscountTest {
     @BeforeEach
     void setUpTest() {
         //Note to self, initsiera innan varje test så jag inte behöver skriva så mycke.
-        tenPercentPriceDiscount = new TenPercentDiscount("10% rabatt borde räknas ut");
+        tenPercentPriceDiscount = new TenPercentDiscount("10% should be counted");
 
     }
 
@@ -47,5 +47,11 @@ class TenPercentDiscountTest {
 
     @Test
     void getDescription() {
+        // Act: Hämta beskrivningen från objektet
+        String description = tenPercentPriceDiscount.getDescription();
+
+        // Assert: Verifiera att den matchar strängen från setUpTest
+        assertEquals("10% should be counted", description,
+                "The description should match the constructor argument");
     }
 }
